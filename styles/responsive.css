@@ -1,0 +1,207 @@
+/* ============================================================
+   CUMBRE MONTEVIDEO 2026 — Responsive Breakpoints
+   ============================================================ */
+
+/* ── Tablet (768px – 1024px) ──────────────────────────────── */
+@media (max-width: 1024px) {
+  .time-block__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding: var(--space-sm);
+  }
+
+  .card__title {
+    font-size: var(--font-size-xs);
+  }
+
+  .header__logo-subtitle {
+    display: none;
+  }
+}
+
+/* ── Mobile (<768px) ──────────────────────────────────────── */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 56px;
+    --tabs-height: 48px;
+    --filters-height: 44px;
+  }
+
+  /* Header */
+  .header {
+    padding: 0 var(--space-md);
+  }
+
+  .header__logo-title {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Day tabs */
+  .day-tabs {
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  .day-tab {
+    padding: var(--space-xs) var(--space-md);
+    min-width: 80px;
+  }
+
+  .day-tab__number {
+    font-size: var(--font-size-md);
+  }
+
+  /* Toolbar */
+  .toolbar {
+    flex-wrap: wrap;
+    padding: var(--space-xs) var(--space-md);
+    gap: var(--space-xs);
+  }
+
+  .search-box {
+    max-width: none;
+    order: -1;
+    width: 100%;
+  }
+
+  /* Hide desktop schedule, show mobile timeline */
+  .schedule {
+    display: none;
+  }
+
+  .timeline {
+    display: flex;
+  }
+
+  .time-block__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .room-chips {
+    display: flex;
+  }
+
+  /* Room chips row */
+  .room-chips-wrapper {
+    position: sticky;
+    top: calc(var(--header-height) + var(--tabs-height) + var(--filters-height));
+    z-index: calc(var(--z-sticky) - 3);
+    padding: var(--space-xs) var(--space-md);
+    background: rgba(10, 15, 30, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  [data-theme="light"] .room-chips-wrapper {
+    background: rgba(240, 244, 248, 0.5);
+  }
+
+  /* Main */
+  .main {
+    padding: var(--space-md);
+  }
+
+  /* Cards */
+  .card {
+    padding: var(--space-md);
+  }
+
+  .card__title {
+    font-size: var(--font-size-sm);
+    -webkit-line-clamp: 3;
+  }
+
+  .card:hover .card__description {
+    display: block;
+  }
+
+  /* Agenda panel full width on mobile */
+  .agenda-panel {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
+
+/* ── Small mobile (<400px) ────────────────────────────────── */
+@media (max-width: 400px) {
+  .day-tab {
+    padding: var(--space-xs) var(--space-sm);
+    min-width: 65px;
+  }
+
+  .day-tab__number {
+    font-size: var(--font-size-base);
+  }
+
+  .day-tab__label {
+    font-size: 0.6rem;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: var(--font-size-xs);
+  }
+
+  .header__logo-title {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* ── Large desktop (>1400px) ──────────────────────────────── */
+@media (min-width: 1400px) {
+  .schedule-grid {
+    gap: var(--space-md);
+  }
+
+  .card {
+    padding: var(--space-lg);
+  }
+
+  .card__title {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ── Print ────────────────────────────────────────────────── */
+@media print {
+  .header,
+  .day-tabs,
+  .toolbar,
+  .room-chips-wrapper,
+  .footer,
+  .card__bookmark,
+  .agenda-overlay,
+  .toast,
+  .import-modal,
+  .confirm-dialog {
+    display: none !important;
+  }
+
+  body {
+    background: #FFF;
+    color: #000;
+  }
+
+  .card {
+    background: #FFF;
+    border: 1px solid #DDD;
+    box-shadow: none;
+    backdrop-filter: none;
+    break-inside: avoid;
+  }
+
+  .schedule {
+    display: block;
+  }
+
+  .card__title {
+    -webkit-line-clamp: unset;
+  }
+}

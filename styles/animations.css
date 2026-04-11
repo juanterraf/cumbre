@@ -1,0 +1,260 @@
+/* ============================================================
+   CUMBRE MONTEVIDEO 2026 — Animations & Transitions
+   ============================================================ */
+
+/* ── Keyframes ────────────────────────────────────────────── */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+@keyframes bookmark-pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.35); }
+  70%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes confetti-burst {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 4px rgba(var(--accent-primary-rgb), 0.2);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(var(--accent-primary-rgb), 0.4);
+  }
+}
+
+@keyframes badge-bump {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* ── Splash Loader ────────────────────────────────────────── */
+
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0A0F1E;
+  transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+}
+
+.splash.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+.splash__logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  animation: splash-spin 2s ease-in-out;
+}
+
+.splash__text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #38BDF8, #F59E0B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.splash__sub {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.splash__bar {
+  width: 120px;
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.splash__bar-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #38BDF8, #F59E0B);
+  animation: splash-progress 1.8s ease-in-out forwards;
+}
+
+.splash__credit {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  animation: fade-in 0.6s 0.5s ease-out both;
+}
+
+@keyframes splash-spin {
+  0%   { transform: rotate(0deg) scale(0.7); opacity: 0; }
+  30%  { transform: rotate(180deg) scale(1.05); opacity: 1; }
+  50%  { transform: rotate(360deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes splash-progress {
+  0%   { width: 0%; }
+  40%  { width: 60%; }
+  100% { width: 100%; }
+}
+
+/* ── Card entrance stagger ────────────────────────────────── */
+.card[data-animate] {
+  animation: fade-in-up 0.3s ease-out both;
+}
+
+/* Stagger delay applied via inline style: style="animation-delay: Xms" */
+
+/* ── Bookmark animation ───────────────────────────────────── */
+.card__bookmark.is-animating {
+  animation: bookmark-pop 0.35s ease-out;
+}
+
+/* Confetti ring on save */
+.card__bookmark.is-saving::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-primary);
+  animation: confetti-burst 0.5s ease-out forwards;
+  pointer-events: none;
+}
+
+/* ── Badge bump ───────────────────────────────────────────── */
+.badge.is-bumping {
+  animation: badge-bump 0.3s ease-out;
+}
+
+/* ── Day tab transition ───────────────────────────────────── */
+.day-tab {
+  transition: all var(--transition-base);
+}
+
+/* ── Agenda panel slide ───────────────────────────────────── */
+.agenda-panel {
+  transition: transform var(--transition-slow);
+}
+
+/* ── Hover glow on saved cards ────────────────────────────── */
+.card--saved:hover {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* ── Smooth view transitions ──────────────────────────────── */
+.main {
+  animation: fade-in 0.2s ease-out;
+}
+
+/* ── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

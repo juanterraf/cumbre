@@ -178,6 +178,7 @@ ul, ol { list-style: none; }
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-bottom: 32px;
 }
 
 /* Header */
@@ -235,6 +236,16 @@ ul, ol { list-style: none; }
   color: var(--text-secondary);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.header__logo-link {
+  text-decoration: none;
+  color: var(--text-tertiary);
+  transition: color var(--transition-fast);
+}
+
+.header__logo-link:hover {
+  color: var(--accent-primary);
 }
 
 .header__actions {
@@ -357,26 +368,33 @@ ul, ol { list-style: none; }
 
 .room-chips::-webkit-scrollbar { display: none; }
 
-/* Footer */
-.footer {
+/* Sticky Footer */
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 150;
   text-align: center;
-  padding: var(--space-xl) var(--space-lg);
+  padding: 8px var(--space-md);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
   color: var(--text-tertiary);
-  font-size: var(--font-size-xs);
+  background: var(--bg-primary);
   border-top: 1px solid var(--glass-border);
 }
 
-.footer a {
+.sticky-footer a {
   color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 600;
   transition: opacity var(--transition-fast);
 }
 
-.footer a:hover { opacity: 0.8; }
+.sticky-footer a:hover { opacity: 0.7; }
 
-.footer__credit {
-  margin-top: var(--space-sm);
-  font-size: var(--font-size-xs);
-  opacity: 0.6;
+.sticky-footer__heart {
+  font-style: normal;
 }
 
 /* ── Agenda Panel (overlay) ───────────────────────────────── */
@@ -513,9 +531,11 @@ ul, ol { list-style: none; }
   box-shadow: 0 8px 32px rgba(56, 189, 248, 0.3);
   transition: transform var(--transition-base);
   pointer-events: none;
+  visibility: hidden;
 }
 
 .toast.is-visible {
+  visibility: visible;
   transform: translateX(-50%) translateY(0);
 }
 

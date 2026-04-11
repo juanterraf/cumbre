@@ -17,7 +17,7 @@
   }
 
   .header__logo-subtitle {
-    display: none;
+    font-size: 0.55rem;
   }
 }
 
@@ -123,9 +123,9 @@
     max-width: 100%;
   }
 
-  /* Footer */
-  .footer {
-    padding: var(--space-lg) var(--space-md);
+  /* Sticky Footer */
+  .sticky-footer {
+    font-size: 0.6rem;
   }
 }
 
@@ -175,7 +175,7 @@
   .day-tabs,
   .toolbar,
   .room-chips-wrapper,
-  .footer,
+  .sticky-footer,
   .card__bookmark,
   .agenda-overlay,
   .toast,

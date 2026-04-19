@@ -2,7 +2,7 @@
 // CUMBRE MONTEVIDEO 2026 — Service Worker (offline support)
 // ============================================================
 
-const CACHE_NAME = 'cumbre2026-v3';
+const CACHE_NAME = 'cumbre2026-v4';
 
 const ASSETS = [
   '/',
@@ -36,27 +36,22 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch — cache-first strategy
+// Fetch — network-first strategy (always fresh, cache as offline fallback)
 self.addEventListener('fetch', (event) => {
-  // Only cache same-origin GET requests
   if (event.request.method !== 'GET') return;
 
   event.respondWith(
-    caches.match(event.request).then(cached => {
-      if (cached) return cached;
-      return fetch(event.request).then(response => {
-        // Cache successful responses
-        if (response.ok && response.type === 'basic') {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
-        }
-        return response;
-      });
-    }).catch(() => {
-      // Fallback for navigation requests
-      if (event.request.mode === 'navigate') {
-        return caches.match('/index.html');
+    fetch(event.request).then(response => {
+      if (response.ok && response.type === 'basic') {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
       }
+      return response;
+    }).catch(() => {
+      return caches.match(event.request).then(cached => {
+        if (cached) return cached;
+        if (event.request.mode === 'navigate') return caches.match('/index.html');
+      });
     })
   );
 });

@@ -8,6 +8,7 @@ import { events, getCountries } from './data.js';
 
 let searchQuery = '';
 let selectedCountry = '';
+let asacopOnly = false;
 let onFilterChange = null;
 
 // ── Init ─────────────────────────────────────────────────────
@@ -16,12 +17,14 @@ export function initFilters(onChange) {
   onFilterChange = onChange;
   setupSearch();
   setupCountryFilter();
+  setupAsacopFilter();
 }
 
 // ── Getters ──────────────────────────────────────────────────
 
 export function getSearchQuery() { return searchQuery; }
 export function getSelectedCountry() { return selectedCountry; }
+export function getAsacopOnly() { return asacopOnly; }
 
 // ── Filter events ────────────────────────────────────────────
 
@@ -43,6 +46,10 @@ export function filterEvents(dayEvents) {
       if (e.room === 'all') return true;
       return e.country.split(' / ').some(c => c === selectedCountry);
     });
+  }
+
+  if (asacopOnly) {
+    filtered = filtered.filter(e => e.room === 'all' || e.asacop === true);
   }
 
   return filtered;
@@ -127,6 +134,20 @@ function setupCountryFilter() {
   document.addEventListener('click', () => {
     dropdown.classList.remove('is-open');
     btn.setAttribute('aria-expanded', 'false');
+  });
+}
+
+// ── ASACOP Filter ────────────────────────────────────────────
+
+function setupAsacopFilter() {
+  const btn = document.getElementById('asacopBtn');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    asacopOnly = !asacopOnly;
+    btn.classList.toggle('is-active', asacopOnly);
+    btn.setAttribute('aria-pressed', asacopOnly);
+    if (onFilterChange) onFilterChange();
   });
 }
 

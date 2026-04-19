@@ -9,6 +9,23 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Cumbre Montevideo 2026 — Agenda</title>
 
+  <!-- Open Graph / WhatsApp -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://cumbre.electolab.com/">
+  <meta property="og:title"       content="XXIV Cumbre Mundial de Comunicación Política">
+  <meta property="og:description" content="Montevideo, 21-23 Abril 2026 · 200+ conferencistas de toda América Latina">
+  <meta property="og:image"       content="https://cumbre.electolab.com/assets/img/logocumbre.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale"      content="es_ES">
+  <meta property="og:site_name"   content="Cumbre Montevideo 2026">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="XXIV Cumbre Mundial de Comunicación Política">
+  <meta name="twitter:description" content="Montevideo, 21-23 Abril 2026 · 200+ conferencistas de toda América Latina">
+  <meta name="twitter:image"       content="https://cumbre.electolab.com/assets/img/logocumbre.jpg">
+
   <!-- Preload font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,6 +77,16 @@
       </div>
     </header>
 
+    <!-- ── Venue ────────────────────────────────────────────── -->
+    <a class="venue-bar" href="https://maps.google.com/?q=Intendencia+de+Montevideo,+Av.+18+de+Julio+1360,+Montevideo+11200,+Uruguay" target="_blank" rel="noopener" aria-label="Ver sede en Google Maps">
+      <span class="venue-bar__icon">📍</span>
+      <span class="venue-bar__info">
+        <span class="venue-bar__name">Intendencia de Montevideo</span>
+        <span class="venue-bar__address">Av. 18 de Julio 1360 · Montevideo, Uruguay</span>
+      </span>
+      <span class="venue-bar__cta">Ver en Maps ↗</span>
+    </a>
+
     <!-- ── Day Tabs ────────────────────────────────────────── -->
     <nav class="day-tabs" role="tablist" aria-label="Días del evento" id="dayTabs">
       <button class="day-tab is-active" role="tab" aria-selected="true"
@@ -98,6 +125,11 @@
         <div class="country-filter__dropdown" id="countryDropdown"
              role="listbox" aria-label="Filtrar por país"></div>
       </div>
+      <button class="country-filter__btn" id="asacopBtn" type="button"
+              aria-pressed="false" title="Mostrar solo socios ASACOP">
+        <span>★</span>
+        <span>ASACOP</span>
+      </button>
     </div>
 
     <!-- ── Room Chips (mobile only) ────────────────────────── -->

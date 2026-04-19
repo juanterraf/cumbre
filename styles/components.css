@@ -2,6 +2,62 @@
    CUMBRE MONTEVIDEO 2026 — Components
    ============================================================ */
 
+/* ── Venue Bar ────────────────────────────────────────────── */
+.venue-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-subtle);
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  transition: background var(--transition-base);
+}
+
+.venue-bar:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+}
+
+.venue-bar__icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.venue-bar__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+  min-width: 0;
+}
+
+.venue-bar__name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.venue-bar__address {
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.venue-bar__cta {
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 /* ── Buttons ──────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
@@ -367,6 +423,11 @@
 .card__type-tag--panel {
   background: rgba(167, 139, 250, 0.15);
   color: #A78BFA;
+}
+
+.card__type-tag--asacop {
+  background: rgba(251, 191, 36, 0.15);
+  color: #F59E0B;
 }
 
 .card__description {

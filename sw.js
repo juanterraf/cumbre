@@ -2,7 +2,7 @@
 // CUMBRE MONTEVIDEO 2026 — Service Worker (offline support)
 // ============================================================
 
-const CACHE_NAME = 'cumbre2026-v1';
+const CACHE_NAME = 'cumbre2026-v3';
 
 const ASSETS = [
   '/',

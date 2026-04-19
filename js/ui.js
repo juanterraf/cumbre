@@ -72,6 +72,9 @@ export function renderCard(event, savedIds, index = 0) {
   } else if (event.type === 'panel') {
     typeTag = '<span class="card__type-tag card__type-tag--panel">👥 Panel</span>';
   }
+  if (event.asacop) {
+    typeTag += '<span class="card__type-tag card__type-tag--asacop">★ ASACOP</span>';
+  }
 
   return `
     <article class="card${typeClass}${savedClass}${live ? ' now-indicator' : ''}"

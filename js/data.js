@@ -438,15 +438,17 @@ export const events = [
   {
     id: "222-rojo-0900",
     day: "2026-04-22", start: "09:00", end: "09:30",
-    speaker: "Carlos Marino", country: "Argentina", countryEmoji: "🇦🇷",
-    title: "Carlos Marino",
+    speaker: "Jorge Borgongoni", country: "Argentina", countryEmoji: "🇦🇷",
+    asacop: true,
+    title: "Los 7 errores que más caro le cuestan a un gobierno (aunque esté haciendo las cosas bien)",
     room: "rojo", type: "talk", description: ""
   },
   {
     id: "222-dorado-0900",
     day: "2026-04-22", start: "09:00", end: "09:30",
-    speaker: "Brenyer Medina", country: "Venezuela", countryEmoji: "🇻🇪",
-    title: "Política de Cristal: ¿Por qué la razón ya no gana elecciones?",
+    speaker: "Oriana Bonazzola", country: "Argentina", countryEmoji: "🇦🇷",
+    asacop: true,
+    title: "Del triunfo electoral al poder real: comunicación estratégica para gobiernos y legisladores",
     room: "dorado", type: "talk", description: ""
   },
 
@@ -468,18 +470,17 @@ export const events = [
   {
     id: "222-rojo-0930",
     day: "2026-04-22", start: "09:30", end: "10:00",
-    speaker: "Jorge Borgongoni", country: "Argentina", countryEmoji: "🇦🇷",
-    asacop: true,
-    title: "Los 7 errores que más caro le cuestan a un gobierno (aunque esté haciendo las cosas bien)",
+    speaker: "Brenyer Medina", country: "Venezuela", countryEmoji: "🇻🇪",
+    title: "Política de Cristal: ¿Por qué la razón ya no gana elecciones?",
     room: "rojo", type: "talk", description: ""
   },
   {
     id: "222-dorado-0930",
     day: "2026-04-22", start: "09:30", end: "10:00",
-    speaker: "Oriana Bonazzola / Ángel Montenegro", country: "Argentina / Perú", countryEmoji: "🇦🇷🇵🇪",
+    speaker: "Diego Furnari", country: "Argentina", countryEmoji: "🇦🇷",
     asacop: true,
-    title: "Del triunfo electoral al poder real / De la exclusión a la victoria electoral",
-    room: "dorado", type: "talk", description: "Comunicación estratégica para gobiernos y legisladores"
+    title: "Del dato al relato: el método DyC",
+    room: "dorado", type: "talk", description: ""
   },
 
   // 10:00
@@ -508,10 +509,10 @@ export const events = [
   {
     id: "222-dorado-1000",
     day: "2026-04-22", start: "10:00", end: "10:30",
-    speaker: "Georgina Paolini / Yessenia Casanova", country: "Argentina / Perú", countryEmoji: "🇦🇷🇵🇪",
+    speaker: "Georgina Paolino", country: "Argentina", countryEmoji: "🇦🇷",
     asacop: true,
-    title: "La IA no siempre sirve / El efecto prisma: cómo la IA refracta el poder político",
-    room: "dorado", type: "talk", description: "Una mirada estratégica sobre el uso de la IA en comunicación política"
+    title: "La inteligencia artificial no siempre sirve. Una mirada estratégica sobre su uso en comunicación política",
+    room: "dorado", type: "talk", description: ""
   },
 
   // 10:30
@@ -521,7 +522,7 @@ export const events = [
     speaker: "Leandro Fagúndez + invitados", country: "Uruguay", countryEmoji: "🇺🇾",
     asacop: true,
     title: "Presentación de libro: \"De la pantalla al Poder\"",
-    room: "azul", type: "book", description: "Invitados: Daniel Ivoskus, Carolina Cosse, Felipe Schipani, Martha Hernández y Daniel González. Modera: Federico de la Fuente."
+    room: "azul", type: "book", description: "Invitados: Daniel Ivoskus, Daniel González, Eugenia Villar, Cristian Calvo, Felipe Schipani y Esteban Zunino. Modera: Federico de la Fuente."
   },
   {
     id: "222-cer-1030",
@@ -540,10 +541,9 @@ export const events = [
   {
     id: "222-dorado-1030",
     day: "2026-04-22", start: "10:30", end: "11:00",
-    speaker: "Diego Furnari / Lorena Britez", country: "Argentina / Paraguay", countryEmoji: "🇦🇷🇵🇾",
-    asacop: true,
-    title: "Del dato al relato: el método DyC / Votos que suman",
-    room: "dorado", type: "talk", description: "La clave para una campaña política exitosa y accesible"
+    speaker: "Lorena Britez", country: "Paraguay", countryEmoji: "🇵🇾",
+    title: "Votos que suman: la clave para una campaña política exitosa y accesible",
+    room: "dorado", type: "talk", description: ""
   },
 
   // COFFEE BREAK 11:00
@@ -581,9 +581,8 @@ export const events = [
   {
     id: "222-dorado-1130",
     day: "2026-04-22", start: "11:30", end: "12:00",
-    speaker: "Conrado Cifuentes / Alfredo Mattos", country: "México / Argentina", countryEmoji: "🇲🇽🇦🇷",
-    asacop: true,
-    title: "Izquierda vs Derecha: El rumbo de las ideologías / Del IQ al EQ: Inteligencia emocional en la era digital",
+    speaker: "Conrado Cifuentes", country: "México", countryEmoji: "🇲🇽",
+    title: "Izquierda vs Derecha: El rumbo de las ideologías políticas",
     room: "dorado", type: "talk", description: ""
   },
 
@@ -631,7 +630,7 @@ export const events = [
     id: "222-cer-1230",
     day: "2026-04-22", start: "12:30", end: "13:00",
     speaker: "Camilo Severino", country: "Ecuador", countryEmoji: "🇪🇨",
-    title: "Campañas cortas",
+    title: "Campañas cortas de impacto",
     room: "ceremonias", type: "talk", description: ""
   },
   {
@@ -677,16 +676,16 @@ export const events = [
     id: "222-rojo-1500",
     day: "2026-04-22", start: "15:00", end: "15:30",
     speaker: "Sebastian Guerrini", country: "Argentina", countryEmoji: "🇦🇷",
-    title: "Marcas que cuentan historias",
-    room: "rojo", type: "book", description: "Presentación de libro"
+    asacop: true,
+    title: "La Marca Política: Presentación del libro \"Marcas que cuentan historias\"",
+    room: "rojo", type: "book", description: ""
   },
   {
     id: "222-dorado-1500",
     day: "2026-04-22", start: "15:00", end: "15:30",
-    speaker: "Roque Cantoia / Gabriela Pérez Carreta", country: "Argentina", countryEmoji: "🇦🇷",
-    asacop: true,
-    title: "¿Dónde están tus votantes? / Pelear o morir: Desafíos estratégicos en las Defensorías del Pueblo",
-    room: "dorado", type: "talk", description: "Investigación electoral entre IA y algoritmos"
+    speaker: "Roque Cantoia", country: "Argentina", countryEmoji: "🇦🇷",
+    title: "¿Dónde están tus votantes? Investigación electoral entre IA y algoritmos",
+    room: "dorado", type: "talk", description: ""
   },
 
   // 15:30
@@ -778,15 +777,6 @@ export const events = [
     speaker: "Erika Valencia", country: "Perú", countryEmoji: "🇵🇪",
     title: "Arquitectura Digital de Campaña",
     room: "dorado", type: "talk", description: ""
-  },
-
-  // COFFEE BREAK 17:00
-  {
-    id: "222-break-1700",
-    day: "2026-04-22", start: "17:00", end: "17:30",
-    speaker: "", country: "", countryEmoji: "",
-    title: "Coffee Break",
-    room: "all", type: "break", description: ""
   },
 
   // 17:30
@@ -887,16 +877,15 @@ export const events = [
   {
     id: "223-azul-0900",
     day: "2026-04-23", start: "09:00", end: "09:30",
-    speaker: "Daniela Barbieri", country: "Argentina", countryEmoji: "🇦🇷",
-    asacop: true,
-    title: "Daniela Barbieri",
+    speaker: "Maxi Constantinis", country: "Argentina", countryEmoji: "🇦🇷",
+    title: "¿Por qué los políticos no invierten en tecnología?",
     room: "azul", type: "talk", description: ""
   },
   {
     id: "223-cer-0900",
     day: "2026-04-23", start: "09:00", end: "09:30",
-    speaker: "Marina Raffaelli", country: "Argentina", countryEmoji: "🇦🇷",
-    title: "Urana político: identidad y poder",
+    speaker: "Esteban Zunino", country: "Uruguay", countryEmoji: "🇺🇾",
+    title: "¿Polarización en el país de los consensos? Un estudio sobre el uso de plataformas sociodigitales en las elecciones presidenciales de 2024 en Uruguay",
     room: "ceremonias", type: "talk", description: ""
   },
   {
@@ -909,8 +898,8 @@ export const events = [
   {
     id: "223-dorado-0900",
     day: "2026-04-23", start: "09:00", end: "09:30",
-    speaker: "Freddy Serrano", country: "Colombia", countryEmoji: "🇨🇴",
-    title: "Aquí nadie se queda en visto",
+    speaker: "Alejandro Félix de Souza", country: "Uruguay", countryEmoji: "🇺🇾",
+    title: "Gobernar es comunicar",
     room: "dorado", type: "talk", description: ""
   },
 
@@ -933,15 +922,15 @@ export const events = [
   {
     id: "223-rojo-0930",
     day: "2026-04-23", start: "09:30", end: "10:00",
-    speaker: "Javier Pizzolito", country: "Argentina", countryEmoji: "🇦🇷",
-    title: "El arte de improvisar lo planificado",
+    speaker: "Andrés Carmona", country: "Colombia", countryEmoji: "🇨🇴",
+    title: "Gana la batalla mediática en la era de las Fake News",
     room: "rojo", type: "talk", description: ""
   },
   {
     id: "223-dorado-0930",
     day: "2026-04-23", start: "09:30", end: "10:00",
-    speaker: "Eduardo Auccalla", country: "Perú", countryEmoji: "🇵🇪",
-    title: "Cerebros, datos y gargantas",
+    speaker: "Freddy Serrano", country: "Colombia", countryEmoji: "🇨🇴",
+    title: "Aquí nadie se queda en visto",
     room: "dorado", type: "talk", description: ""
   },
 
@@ -970,8 +959,8 @@ export const events = [
   {
     id: "223-dorado-1000",
     day: "2026-04-23", start: "10:00", end: "10:30",
-    speaker: "Andrés Rojas y Rodrigo Toro", country: "Colombia", countryEmoji: "🇨🇴",
-    title: "Algoritmo vs Maquinarias: Contenido y calle para enfrentar la polarización",
+    speaker: "Eduardo Auccalla", country: "Perú", countryEmoji: "🇵🇪",
+    title: "Cerebros, datos y gargantas",
     room: "dorado", type: "talk", description: ""
   },
 
@@ -1083,7 +1072,7 @@ export const events = [
     day: "2026-04-23", start: "12:30", end: "13:00",
     speaker: "Panel Presidenciable de Partidos", country: "Uruguay", countryEmoji: "🇺🇾",
     title: "Panel Presidenciable de Partidos",
-    room: "azul", type: "panel", description: "Fernando Pereira, Álvaro Delgado, Andrés Ojeda, Pablo Mieres y Manini Ríos. Modera: Leandro Fagúndez"
+    room: "azul", type: "panel", description: "Fernando Pereira, Álvaro Delgado, Andrés Ojeda, Pablo Mieres y Manini Ríos. Modera: Cristian Calvo"
   },
   {
     id: "223-cer-1230",
@@ -1134,8 +1123,8 @@ export const events = [
   {
     id: "223-rojo-1500",
     day: "2026-04-23", start: "15:00", end: "15:30",
-    speaker: "Arnoldo Wiens", country: "Paraguay", countryEmoji: "🇵🇾",
-    title: "Liderar con visión de futuro",
+    speaker: "Enrico Liverotti", country: "Argentina", countryEmoji: "🇦🇷",
+    title: "El fin de la comunicación política tradicional: gobernar en tiempos de ansiedad y desconfianza",
     room: "rojo", type: "talk", description: ""
   },
   {
@@ -1239,15 +1228,6 @@ export const events = [
     room: "dorado", type: "book", description: "Presentación de libro"
   },
 
-  // COFFEE BREAK 17:00
-  {
-    id: "223-break-1700",
-    day: "2026-04-23", start: "17:00", end: "17:30",
-    speaker: "", country: "", countryEmoji: "",
-    title: "Coffee Break",
-    room: "all", type: "break", description: ""
-  },
-
   // 17:30
   {
     id: "223-azul-1730",
@@ -1267,8 +1247,8 @@ export const events = [
   {
     id: "223-rojo-1730",
     day: "2026-04-23", start: "17:30", end: "18:00",
-    speaker: "Amel Richardson", country: "República Dominicana", countryEmoji: "🇩🇴",
-    title: "La Esquina Municipal Smart y Real",
+    speaker: "Emamnuel Karlau / Leandro Lurati", country: "Argentina", countryEmoji: "🇦🇷",
+    title: "Quién decide en una crisis / IA generativa y democracia: quién tiene la palabra en la nueva esfera pública",
     room: "rojo", type: "talk", description: ""
   },
   {
